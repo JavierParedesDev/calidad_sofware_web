@@ -11,28 +11,40 @@ document.addEventListener('DOMContentLoaded', () => {
         // Validación simple
         if (username === '' || password === '') {
             Swal.fire({
-                title: "Por favor, ingrese sus datos correctamente",
-                icon: "error", 
-                confirmButtonText: 'OK'
-            });
-            return; // Salir de la función si hay un error
+            title: "Por favor, ingrese sus datos correctamente",
+            icon: "error", 
+            confirmButtonText: 'OK',
+            customClass: {
+                popup: 'responsive-swal',
+            }
+        });
+
+            return; 
         }
 
         if (username.length < 5) {
-            Swal.fire({
-                title: "Por favor, ingrese sus datos correctamente",
-                icon: "error", 
-                confirmButtonText: 'OK'
-            });
+           Swal.fire({
+            title: "Por favor, ingrese sus datos correctamente",
+            icon: "error", 
+            confirmButtonText: 'OK',
+            customClass: {
+                popup: 'responsive-swal',
+            }
+        });
+
             
         }
 
         if (password.length < 8) {
-            Swal.fire({
-                title: "Por favor, ingrese sus datos correctamente",
-                icon: "error", 
-                confirmButtonText: 'OK'
-            });
+          Swal.fire({
+            title: "Por favor, ingrese sus datos correctamente",
+            icon: "error", 
+            confirmButtonText: 'OK',
+            customClass: {
+                popup: 'responsive-swal',
+            }
+        });
+
         }
 
         errorMessage.textContent = ''; 
